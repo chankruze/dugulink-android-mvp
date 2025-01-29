@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Server Address Input -->
+    <EditText
+        android:id="@+id/editTextServerAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Server Address"
+        android:inputType="text"
+        android:text="0.tcp.in.ngrok.io" />
+
+    <!-- Port Input -->
+    <EditText
+        android:id="@+id/editTextPort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Port"
+        android:inputType="number" />
+
+    <!-- MAC Address Input -->
+    <EditText
+        android:id="@+id/editTextMacAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Client ID"
+        android:inputType="textCapCharacters" />
+
+    <!-- Connect Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonConnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect" />
+
+    <!-- Commands Layout: Hidden initially -->
+    <LinearLayout
+        android:id="@+id/layout_commands"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!-- Pin Number Input -->
+        <EditText
+            android:id="@+id/edit_text_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Pin Number"
+            android:inputType="numberDecimal" />
+
+        <!-- Command Buttons: ADD, ON, OFF -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonAdd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ADD" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonOn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:text="ON" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonOff"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:text="OFF" />
+        </LinearLayout>
+
+        <!-- Command Input (visible after connecting) -->
+        <EditText
+            android:id="@+id/editTextCommand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Command"
+            android:inputType="text"
+            android:visibility="gone" />
+
+        <!-- Publish Button (visible after connecting) -->
+        <Button
+            android:id="@+id/buttonPublish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Publish"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- Received Message Display -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewReceivedMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="Received messages will appear here"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</LinearLayout>
