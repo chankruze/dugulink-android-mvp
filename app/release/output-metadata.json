@@ -11,9 +11,9 @@
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 105,
-      "versionName": "1.0.5",
-      "outputFile": "app-release-105.apk"
+      "versionCode": 107,
+      "versionName": "1.0.7",
+      "outputFile": "DuguLink-MVP-release-107.apk"
     }
   ],
   "elementType": "File",
@@ -22,14 +22,14 @@
       "minApi": 28,
       "maxApi": 30,
       "baselineProfiles": [
-        "baselineProfiles/1/app-release-105.dm"
+        "baselineProfiles/1/DuguLink-MVP-release-107.dm"
       ]
     },
     {
       "minApi": 31,
       "maxApi": 2147483647,
       "baselineProfiles": [
-        "baselineProfiles/0/app-release-105.dm"
+        "baselineProfiles/0/DuguLink-MVP-release-107.dm"
       ]
     }
   ],

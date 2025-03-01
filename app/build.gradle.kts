@@ -10,8 +10,8 @@ android {
         applicationId = "com.geekofia.bluelink_mvp"
         minSdk = 25
         targetSdk = 34
-        versionCode = 105
-        versionName = "1.0.5"
+        versionCode = 107
+        versionName = "1.0.7"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -37,7 +37,7 @@ android {
 
     applicationVariants.all {
         outputs.all {
-            val appName = project.name
+            val appName = rootProject.name
             val versionCode = this@all.versionCode
             val variantName = name
             val fileExtension = if (outputFile.name.endsWith(".apk")) "apk" else "aab"

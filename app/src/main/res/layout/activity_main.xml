@@ -5,22 +5,35 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Server Address Input -->
-    <EditText
-        android:id="@+id/editTextServerAddress"
+    <!-- Protocol Selection -->
+    <RadioGroup
+        android:id="@+id/radioGroupProtocol"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Server Address"
-        android:inputType="text"
-        android:text="0.tcp.in.ngrok.io" />
+        android:orientation="horizontal">
 
-    <!-- Port Input -->
-    <EditText
-        android:id="@+id/editTextPort"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Port"
-        android:inputType="number" />
+        <RadioButton
+            android:id="@+id/radioButtonSsl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="SSL Connection" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNoSsl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Non SSL Connection" />
+    </RadioGroup>
+
+    <!-- Server Address Input -->
+<!--    <EditText-->
+<!--        android:id="@+id/editTextServerAddress"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Enter Server Address"-->
+<!--        android:inputType="text"-->
+<!--        android:text="mqtt.dugulink.xyz" />-->
 
     <!-- MAC Address Input -->
     <EditText
@@ -29,6 +42,39 @@
         android:layout_height="wrap_content"
         android:hint="Enter Client ID"
         android:inputType="textCapCharacters" />
+
+    <!-- Authentication Toggle -->
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkBoxAuth"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:checked="true"-->
+<!--        android:text="Enable Authentication" />-->
+
+    <!-- Authentication Fields (Hidden by Default) -->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layoutAuthFields"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:visibility="gone">-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/editTextUsername"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Enter Username"-->
+<!--            android:inputType="text"-->
+<!--            android:text="ubuntu" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/editTextPassword"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Enter Password"-->
+<!--            android:inputType="textPassword"-->
+<!--            android:text="chandu" />-->
+<!--    </LinearLayout>-->
 
     <!-- Connect Button -->
     <com.google.android.material.button.MaterialButton
@@ -67,7 +113,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="ADD" />
+                android:text="CONFIGURE" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonOn"

@@ -20,5 +20,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "BlueLink - MVP"
+rootProject.name = "DuguLink-MVP"
 include(":app")
